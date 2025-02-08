@@ -58,7 +58,7 @@ config.background = {
     -- This is the deepest/back-most layer. It will be rendered first
     {
       source = {
-        File = 'C:\\Users\\karst\\lorenz.png',
+        File = wezterm.config_dir .. '/lorenz.png',
       },
       -- The texture tiles vertically but not horizontally.
       -- When we repeat it, mirror it so that it appears "more seamless".
