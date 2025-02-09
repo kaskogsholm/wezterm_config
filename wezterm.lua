@@ -1,7 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 local smart_splits = wezterm.plugin.require('https://github.com/mrjones2014/smart-splits.nvim')
-
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 wezterm.log_error('hello ' .. wezterm.version)
@@ -35,6 +35,7 @@ config.skip_close_confirmation_for_processes_named = {
     'wezterm.exe',
   }
 config.keys = {
+{ key = "s", mods = "CTRL|SHIFT", action = workspace_switcher.switch_workspace() },
 {
     key = 'w', 
     mods = 'CTRL|SHIFT', 
