@@ -4,7 +4,7 @@ local smart_splits = wezterm.plugin.require('https://github.com/mrjones2014/smar
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
-wezterm.log_error('Version ' .. wezterm.version)
+wezterm.log_error('hello ' .. wezterm.version)
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
@@ -35,6 +35,11 @@ config.skip_close_confirmation_for_processes_named = {
     'wezterm.exe',
   }
 config.keys = {
+{
+    key = 'w', 
+    mods = 'CTRL|SHIFT', 
+    action = wezterm.action.CloseCurrentTab { confirm = false }
+},
 {
     key = 'x',
     mods = 'SHIFT|ALT',
