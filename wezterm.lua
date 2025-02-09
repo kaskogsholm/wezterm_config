@@ -20,7 +20,7 @@ config.wsl_domains = {
     },
 }
 config.default_domain = 'WSL:Ubuntu'
-
+config.window_close_confirmation = 'NeverPrompt'
 config.skip_close_confirmation_for_processes_named = {
     'bash',
     'sh',
